@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.*;
-import java.awt.event.ActionListener;
+
 
 
 
@@ -108,11 +108,11 @@ public class View {
         JButton button = buttons[r][c] = new JButton();
         myButtonPanel.add(button);
         button.setPreferredSize(new Dimension(50, 50));
-        button.addActionListener(new ActionListener() {
-          @Override
-          public void actionPreformed(ActionEvent e) {
-            controller.unitClicked(_r, _c);
-              }
+          button.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e){
+              controller.unitClicked(_r,_c);
+            }
           });
           myButtonPanel.add(button);
       }
