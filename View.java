@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.*;
+import java.awt.event.ActionListener;
 
 
 
@@ -14,14 +15,14 @@ public class View {
   private static Controller controller;
 
   static public int player = 0;
-  static public char[][] board = new char[3][3];
+  // static public char[][] board = new char[3][3];
 
   static boolean gameover = false;
 
-  public static boolean checkifP1win() {
+  /* public static boolean checkifP1win() {
     boolean win = false;
 
-    if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O')
+   if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O')
       win = true;
     if (board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O')
       win = true;
@@ -73,8 +74,10 @@ public class View {
     for (int x = 0; x < 3; x++)
       for (int y = 0; y < 3; y++) {
         board[x][y] = ' ';
-      }
+      }*/
 
+      public View(Controller _controller){
+        this.controller = _controller;
     JFrame frame = new JFrame("TerribleTicTacToe");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -197,6 +200,7 @@ public class View {
         //Display the window.
         frame.pack();
         frame.setVisible(true);
+      }
         
 	}
 
