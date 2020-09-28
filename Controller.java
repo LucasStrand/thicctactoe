@@ -2,7 +2,7 @@ public class Controller {
 
   public View _view;
   
-  public void Controller(){
+  public Controller(){
     this._view= new View(this);
   }
 
