@@ -1,12 +1,15 @@
 public class Controller {
 
-  public View _view;
+  public View view;
+  public Player player;
   
   public Controller(){
-    this._view= new View(this);
+    this.view= new View(this);
   }
 
 	public void unitClicked(int _r, int _c) {
+    player.moveMade(_r,_c);
+
 	}
   
 }

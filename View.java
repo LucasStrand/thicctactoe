@@ -13,7 +13,7 @@ public class View {
 
   static public int player = 0;
 
-  static boolean gameover = false;
+  
 
   public View(Controller _controller) {
     this.controller = _controller;
