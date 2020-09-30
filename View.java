@@ -5,11 +5,11 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.*;
 
-public class View {
+  public class View {
   int rows = 3;
   int cols = 3;
   JButton buttons[][] = new JButton[rows][cols];
-  private static Controller controller;
+  private  Controller controller;
   JLabel myLabel;
 
   static public int player = 0;
