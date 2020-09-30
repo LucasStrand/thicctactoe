@@ -3,16 +3,16 @@ import java.util.ResourceBundle.Control;
 import javax.swing.JButton;
 
 public class RuleEngine {
-  Move move;
 	Controller controller;
-	static JButton buttons[][];
+	// static JButton buttons[][] = new JButton[3][3];
 
 	public RuleEngine(Controller _controller) {
-		this.move = new Move(controller);
+		this.controller = _controller;
 	}
 
-	public static boolean checkifP1win(int _r, int _c) {
-		buttons[_r][_c] = new JButton();
+	public boolean checkifP1win() {
+		// JButton button = controller.view.buttons[_r][_c];
+		JButton buttons[][] = controller.view.buttons;
     boolean win = false;
 		if(buttons[0][0].getText() == "O" && buttons[0][1].getText() == "O" && buttons[0][2].getText() == "O")
 			win = true;
@@ -36,9 +36,9 @@ public class RuleEngine {
 		return win;
 	}
 
-	public static boolean checkifP2win(int _r, int _c) {
+	public boolean checkifP2win() {
 		boolean win = false;
-		buttons[_r][_c] = new JButton();
+		JButton buttons[][] = controller.view.buttons;
 		if(buttons[0][0].getText() == "X" && buttons[0][1].getText() == "X" && buttons[0][2].getText() == "X")
 			win = true;
 		if(buttons[1][0].getText() == "X" && buttons[1][1].getText() == "X" && buttons[1][2].getText() == "X")

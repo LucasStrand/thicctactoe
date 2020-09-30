@@ -7,7 +7,7 @@ public class Move {
 
   public Move(Controller _controller){
 		this.controller = _controller;
-		this.ruleEngine = new RuleEngine(_controller);
+		this.ruleEngine = new RuleEngine(controller);
 		
 	}
 	
@@ -19,7 +19,7 @@ public class Move {
         		if(Player.player == 0) {
 									 button.setText("O");
 									//  System.out.println("test");
-               		if(ruleEngine.checkifP1win(_r,_c)) {
+               		if(ruleEngine.checkifP1win()) {
                			controller.view.myLabel.setText("player 1 won!");
                			gameover = true;
                			return;
@@ -29,7 +29,7 @@ public class Move {
         		}
         		else {
                		button.setText("X");
-               		if(ruleEngine.checkifP2win(_r,_c)) {
+               		if(ruleEngine.checkifP2win()) {
                			controller.view.myLabel.setText("player 2 won!");
                			gameover = true;
                			return;
