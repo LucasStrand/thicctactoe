@@ -8,6 +8,7 @@ public class Controller {
     this.player=new Player(this);
   }
 
+
 	public void unitClicked(int _r, int _c) {
     player.moveMade(_r,_c);
 
