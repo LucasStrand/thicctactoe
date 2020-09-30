@@ -15,7 +15,7 @@ public class Move {
     if(button.getText() != " " || gameover) return;
         		if(Player.player == 0) {
 									 button.setText("O");
-									 System.out.println("bajskorv");
+									//  System.out.println("test");
                		/*if(checkifP1win()) {
                			controller.view.myLabel.setText("player 1 won!");
                			gameover = true;
