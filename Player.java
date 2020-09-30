@@ -1,13 +1,11 @@
 public class Player {
   Move move;
+  Controller controller;
   static public int player = 0;
 
-  public Player() {
-
-  }
-
-  public Player(Move move) {
-    this.move = new Move();
+  public Player(Controller _controller) {
+    this.controller = _controller;
+    this.move = new Move(controller);
   }
 
   public void moveMade(int _r, int _c) {

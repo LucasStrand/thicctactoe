@@ -5,6 +5,7 @@ public class Controller {
   
   public Controller(){
     this.view= new View(this);
+    this.player=new Player(this);
   }
 
 	public void unitClicked(int _r, int _c) {

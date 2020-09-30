@@ -1,20 +1,21 @@
 import javax.swing.JButton;
 
 public class Move {
-  // Player player;
   public Controller controller;
-  static boolean gameover = false;
-  
-  public Move(){
-    this.controller = controller;
-    // this.player= new Player(this);
-  }
+	static boolean gameover = false;
+
+  public Move(Controller _controller){
+		this.controller = _controller;
+		
+	}
+	
   public void verifyMove(int _r,int _c){
     JButton button = controller.view.buttons[_r][_c];
     
     if(button.getText() != " " || gameover) return;
         		if(Player.player == 0) {
-               		button.setText("O");
+									 button.setText("O");
+									 System.out.println("bajskorv");
                		/*if(checkifP1win()) {
                			controller.view.myLabel.setText("player 1 won!");
                			gameover = true;
