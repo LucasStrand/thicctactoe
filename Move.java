@@ -6,11 +6,13 @@ public class Move {
 
   public Move(Controller _controller){
 		this.controller = _controller;
+
 		
 	}
 	
   public void verifyMove(int _r,int _c){
-    JButton button = controller.view.buttons[_r][_c];
+		JButton button = controller.view.buttons[_r][_c];
+		// char moveChar [][] = 
     
     if(button.getText() != " " || gameover) return;
         		if(Player.player == 0) {
