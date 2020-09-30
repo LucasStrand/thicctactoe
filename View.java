@@ -10,6 +10,7 @@ public class View {
   int cols = 3;
   JButton buttons[][] = new JButton[rows][cols];
   private static Controller controller;
+  JLabel myLabel;
 
   static public int player = 0;
 
@@ -44,7 +45,7 @@ public class View {
     JPanel myTextPanel = new JPanel();
     myTextPanel.setLayout(new GridLayout(1, 1));
     myTextPanel.setPreferredSize(new Dimension(150, 50));
-    JLabel myLabel = new JLabel("player 1's turn", SwingConstants.CENTER);
+    myLabel = new JLabel("player 1's turn", SwingConstants.CENTER);
     myTextPanel.add(myLabel);
 
     JPanel myMainPanel = new JPanel();
