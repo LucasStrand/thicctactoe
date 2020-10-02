@@ -13,7 +13,14 @@ public class RuleEngine {
 	public boolean checkifP1win() {
 		// JButton button = controller.view.buttons[_r][_c];
 		JButton buttons[][] = controller.view.buttons;
-    boolean win = false;
+		boolean win = false;
+
+		int winCondition = 5;
+		  for(int i = 0; i<winCondition; i+=1){
+			if(buttons[i][i].getText() == "O"){
+
+			}
+		}
 		if(buttons[0][0].getText() == "O" && buttons[0][1].getText() == "O" && buttons[0][2].getText() == "O")
 			win = true;
 		if(buttons[1][0].getText() == "O" && buttons[1][1].getText() == "O" && buttons[1][2].getText() == "O")

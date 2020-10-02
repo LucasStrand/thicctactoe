@@ -3,7 +3,7 @@ public class Controller {
   public View view;
   public View view2;
   public Player player;
-  public boolean twoGui = true;
+  public boolean twoGui = false;
 
   public Controller(){
     this.view= new View(this); 

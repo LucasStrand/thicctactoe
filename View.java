@@ -6,8 +6,8 @@ import java.awt.GridLayout;
 import java.awt.event.*;
 
   public class View {
-  int rows = 3;
-  int cols = 3;
+  int rows = 10;
+  int cols = 10;
   JButton buttons[][] = new JButton[rows][cols];
   private  Controller controller;
   JLabel myLabel;
@@ -23,7 +23,7 @@ import java.awt.event.*;
 
     JPanel myButtonPanel = new JPanel();
 
-    myButtonPanel.setLayout(new GridLayout(3, 3));
+    myButtonPanel.setLayout(new GridLayout(rows, cols));
 
     for (int r = 0; r < rows; r += 1) {
       for (int c = 0; c < cols; c += 1) {
