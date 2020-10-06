@@ -1,22 +1,30 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Controller {
 
-  public View view;
-  public View view2;
-  public Player player;
-  public boolean twoGui = false;
+  public View[] view;
+  public Player[]player;
+  public boolean  multipleGui = false;
+  public int windowAmmount = 1;
+  
+  private RuleEngine ruleEngine;
 
   public Controller(){
-    this.view= new View(this); 
-    if(twoGui == true){
-      this.view2= new View(this);
+    this.ruleEngine = new RuleEngine(this);
+    if(multipleGui){
+      windowAmmount = ruleEngine.playerAmmount();
+    for(int i = 0; i< windowAmmount; i+=1){
+      this.player[i]= new Player(this, i);
+      this.view[i]= new View(this ,player[i]);
     }
-    this.player=new Player(this);
+  }else{view =new View[1];}
   }
 
 
-	public void unitClicked(int _r, int _c) {
-    player.moveMade(_r,_c);
 
+	public void unitClicked(int _r, int _c) {
+    player[ruleEngine.playersTurn()].moveMade(_r,_c);
 	}
   
 }

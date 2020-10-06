@@ -12,11 +12,12 @@ import java.awt.event.*;
   private  Controller controller;
   JLabel myLabel;
 
-  static public int player = 0;
+  private Player player;
 
   
 
-  public View(Controller _controller) {
+  public View(Controller _controller, Player player) {
+    this.player = player;
     this.controller = _controller;
     JFrame frame = new JFrame("TerribleTicTacToe");
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
